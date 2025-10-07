@@ -15,6 +15,8 @@
   --bg-light: #f8f9fa;
   --white: #ffffff;
   --border-color: #e0e0e0;
+  --success-green: #28a745;
+  --warning-yellow: #ffc107;
 }
 
 body {
@@ -175,7 +177,7 @@ body {
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
@@ -207,6 +209,20 @@ body {
   background: var(--itau-orange);
   color: var(--white);
   transform: translateY(-2px);
+}
+
+.tag.no-interest {
+  background: #f5f5f5;
+  color: var(--text-light);
+  border-color: var(--text-light);
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.tag.no-interest:hover {
+  background: #f5f5f5;
+  color: var(--text-light);
+  transform: none;
 }
 
 /* Journey Timeline */
@@ -337,6 +353,208 @@ body {
   left: 0;
   color: var(--itau-orange);
   font-weight: bold;
+}
+
+/* Itaú Achievements Section */
+.itau-achievements {
+  padding: 50px;
+  background: linear-gradient(135deg, var(--itau-dark-blue) 0%, #0f1221 100%);
+  color: var(--white);
+}
+
+.itau-achievements .section-title {
+  color: var(--white);
+  border-bottom-color: var(--itau-orange);
+}
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.achievement-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(236, 112, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--itau-orange);
+  box-shadow: 0 10px 30px rgba(236, 112, 0, 0.3);
+}
+
+.achievement-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.achievement-card h4 {
+  color: var(--itau-orange);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.achievement-event {
+  color: var(--itau-orange);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.achievement-card p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+}
+
+/* Deliveries Section */
+.deliveries-section {
+  margin-top: 40px;
+}
+
+.deliveries-title {
+  color: var(--itau-orange);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--itau-orange);
+}
+
+.delivery-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border-left: 5px solid var(--itau-blue);
+  transition: all 0.3s ease;
+}
+
+.delivery-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.delivery-item.current {
+  border-left-color: var(--itau-orange);
+}
+
+.delivery-item.completed {
+  border-left-color: var(--success-green);
+}
+
+.delivery-item.paused {
+  border-left-color: var(--warning-yellow);
+}
+
+.delivery-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.delivery-number {
+  width: 50px;
+  height: 50px;
+  background: var(--itau-orange);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.delivery-item.completed .delivery-number {
+  background: var(--success-green);
+}
+
+.delivery-item.paused .delivery-number {
+  background: var(--warning-yellow);
+  color: var(--text-dark);
+}
+
+.delivery-info {
+  flex: 1;
+}
+
+.delivery-info h5 {
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.delivery-status {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.delivery-status.current {
+  background: var(--itau-orange);
+  color: var(--white);
+}
+
+.delivery-status.completed {
+  background: var(--success-green);
+  color: var(--white);
+}
+
+.delivery-status.paused {
+  background: var(--warning-yellow);
+  color: var(--text-dark);
+}
+
+.delivery-content p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.delivery-content strong {
+  color: var(--itau-orange);
+}
+
+.delivery-details {
+  list-style: none;
+  margin: 15px 0;
+}
+
+.delivery-details li {
+  padding: 8px 0 8px 25px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.delivery-details li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--itau-orange);
+  font-weight: bold;
+}
+
+.tech-used {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Community Section */
@@ -669,6 +887,7 @@ body {
   .profile-section,
   .tech-stack,
   .journey-section,
+  .itau-achievements,
   .community-section,
   .values-section,
   .goals-section,
@@ -686,7 +905,8 @@ body {
   }
 
   .tech-grid,
-  .values-grid {
+  .values-grid,
+  .achievement-grid {
     grid-template-columns: 1fr;
   }
 
@@ -703,6 +923,11 @@ body {
   .section-title {
     font-size: 1.5rem;
   }
+
+  .delivery-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media print {
@@ -716,7 +941,8 @@ body {
   }
 
   .tag:hover,
-  .value-card:hover {
+  .value-card:hover,
+  .achievement-card:hover {
     transform: none;
   }
 }
