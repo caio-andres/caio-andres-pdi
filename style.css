@@ -846,7 +846,7 @@ body {
 }
 
 .footer-quote {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-style: italic;
   color: var(--itau-orange);
   margin-bottom: 20px;
@@ -865,23 +865,73 @@ body {
 }
 
 /* Responsive Design */
+
+/* Tablets e dispositivos médios */
+@media (max-width: 1024px) {
+  .container {
+    border-radius: 0;
+  }
+
+  .header h1 {
+    font-size: 1.7rem;
+  }
+
+  .profile-header {
+    gap: 30px;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .achievement-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Smartphones e dispositivos pequenos */
 @media (max-width: 768px) {
   body {
-    padding: 10px;
+    padding: 0;
+  }
+
+  .container {
+    border-radius: 0;
   }
 
   .header {
-    padding: 30px 25px;
+    padding: 25px 20px;
   }
 
   .header-content {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     text-align: center;
   }
 
+  .logo-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+
   .header h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .header-info .year {
+    font-size: 2rem;
+  }
+
+  .itau-square {
+    width: 40px;
+    height: 40px;
+  }
+
+  .itau-square::after {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--white);
   }
 
   .profile-section,
@@ -893,40 +943,357 @@ body {
   .goals-section,
   .development-plan,
   .footer {
-    padding: 30px 25px;
+    padding: 30px 20px;
   }
 
   .profile-header {
     grid-template-columns: 1fr;
+    gap: 25px;
   }
 
   .name {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
   }
 
-  .tech-grid,
-  .values-grid,
+  .role {
+    font-size: 1.1rem;
+  }
+
+  .department {
+    font-size: 1rem;
+  }
+
+  .profile-details {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .tech-category h4 {
+    font-size: 1.1rem;
+  }
+
+  .tag {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
+  .timeline {
+    padding-left: 30px;
+  }
+
+  .timeline-item {
+    padding-left: 20px;
+  }
+
+  .timeline-marker {
+    left: -36px;
+    width: 16px;
+    height: 16px;
+    border: 3px solid var(--itau-orange);
+  }
+
+  .timeline-content {
+    padding: 20px;
+  }
+
+  .timeline-content h4 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-date {
+    font-size: 0.8rem;
+  }
+
+  .highlight-project {
+    padding: 15px;
+  }
+
   .achievement-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .achievement-card {
+    padding: 25px;
+  }
+
+  .achievement-icon {
+    font-size: 2.5rem;
+  }
+
+  .achievement-card h4 {
+    font-size: 1.2rem;
+  }
+
+  .deliveries-title {
+    font-size: 1.3rem;
+  }
+
+  .delivery-item {
+    padding: 20px;
+  }
+
+  .delivery-header {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .delivery-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .delivery-info h5 {
+    font-size: 1.1rem;
+  }
+
+  .delivery-status {
+    font-size: 0.7rem;
+    padding: 4px 10px;
   }
 
   .community-stats {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .stat {
+    padding: 15px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .community-description p {
+    font-size: 1rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .value-card {
+    padding: 25px;
+  }
+
+  .value-icon {
+    font-size: 2.5rem;
+  }
+
+  .goal-card {
+    padding: 25px;
   }
 
   .goal-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
+    gap: 12px;
+  }
+
+  .goal-header h4 {
+    font-size: 1.2rem;
+  }
+
+  .goal-content h5 {
+    font-size: 1.1rem;
+  }
+
+  .goal-context {
+    padding: 20px;
+  }
+
+  .action-item {
+    padding: 10px;
+    gap: 12px;
+  }
+
+  .action-icon {
+    width: 25px;
+    height: 25px;
+    font-size: 0.9rem;
+  }
+
+  .category-title {
+    font-size: 1.2rem;
+  }
+
+  .plan-item {
+    padding: 20px;
+  }
+
+  .plan-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .plan-item-header strong {
+    font-size: 1rem;
+  }
+
+  .footer {
+    padding: 30px 20px;
+  }
+
+  .footer-quote {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .footer-name {
+    font-size: 1.1rem;
+  }
+}
+
+/* Smartphones muito pequenos */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.2rem;
+  }
+
+  .header-info .year {
+    font-size: 1.5rem;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .role {
+    font-size: 1rem;
   }
 
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 0;
+  }
+
+  .detail-item .label,
+  .detail-item .value {
+    font-size: 0.9rem;
+  }
+
+  .timeline {
+    padding-left: 25px;
+  }
+
+  .timeline-item {
+    padding-left: 15px;
+  }
+
+  .timeline-marker {
+    left: -31px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .timeline-content h4 {
+    font-size: 1rem;
+  }
+
+  .achievement-card h4 {
+    font-size: 1.1rem;
   }
 
   .delivery-header {
     flex-direction: column;
     align-items: flex-start;
+    gap: 12px;
+  }
+
+  .delivery-number {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .delivery-info h5 {
+    font-size: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+
+  .value-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .goal-header h4 {
+    font-size: 1.1rem;
+  }
+
+  .goal-deadline {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .footer-quote {
+    font-size: 1rem;
+  }
+}
+
+/* Landscape em smartphones */
+@media (max-width: 768px) and (orientation: landscape) {
+  .header {
+    padding: 20px;
+  }
+
+  .profile-section,
+  .tech-stack,
+  .journey-section,
+  .itau-achievements,
+  .community-section,
+  .values-section,
+  .goals-section,
+  .development-plan,
+  .footer {
+    padding: 25px 20px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achievement-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets em landscape */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .achievement-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
